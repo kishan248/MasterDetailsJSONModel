@@ -1,0 +1,17 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="com.bosch.training.MasterDetail.controller.MasterPage" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>Products} ({/count})">
+				<content>
+					<List id="idProductList" growing="true" growingScrollToLoad="true" inset="false" itemPress="onItemPress"
+						items="{/value/}">
+						<items>
+							<StandardListItem type="Navigation" description="{Name}" title="{ID}"/>
+						</items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
