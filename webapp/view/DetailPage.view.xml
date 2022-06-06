@@ -5,33 +5,7 @@
 			<Page title="{i18n>DetailView}">
 				<content>
 					<ObjectHeader responsive="true" intro="{Product>/Description}" title="{Product>/Name}"></ObjectHeader>
-					<Table id="idCategoryTable" items="{Product>/Categories/}">
-						<headerToolbar>
-							<Toolbar>
-								<content>
-									<Title text="{i18n>Categories}" level="H2"/>
-									<ToolbarSpacer/>
-									<Button icon="sap-icon://add" press="onCreateNewProduct"/>
-								</content>
-							</Toolbar>
-						</headerToolbar>
-						<columns>
-							<Column>
-								<Text text="{i18n>ID}"/>
-							</Column>
-							<Column>
-								<Text text="{i18n>Category}"/>
-							</Column>
-						</columns>
-						<items>
-							<ColumnListItem>
-								<cells>
-									<ObjectIdentifier title="{Product>ID}"/>
-									<Text text="{Product>Name}"/>
-								</cells>
-							</ColumnListItem>
-						</items>
-					</Table>
+					<core:Fragment type="XML" fragmentName="com.bosch.training.MasterDetail.fragments.CategoryTable"></core:Fragment>
 				</content>
 			</Page>
 		</pages>
